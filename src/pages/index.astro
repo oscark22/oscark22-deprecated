@@ -3,9 +3,34 @@ import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
 import Title from "../components/Title.astro";
 import { Content as AboutMe } from "../content/about-me.mdx";
+import Subtitle from "../components/Subtitle.astro";
+import Card from "../components/Card.astro";
 ---
 
 <Layout title="About Me">
   <Title />
   <AboutMe />
+  <Subtitle text="Some projects I've built." />
+  <ul role="list" class="card-grid">
+    <Card
+      title="Project One"
+      text="The max thing in the world."
+      href="google.com"
+    />
+    <Card
+      title="Project One"
+      text="The max thing in the world."
+      href="google.com"
+    />
+  </ul>
 </Layout>
+
+<style>
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 0;
+  }
+</style>

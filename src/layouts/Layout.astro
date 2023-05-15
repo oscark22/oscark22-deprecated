@@ -29,7 +29,7 @@ const { title } = Astro.props;
     @import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
 
     :root {
-      --accent-gradient: linear-gradient(
+      --blue-gradient: linear-gradient(
         90deg,
         #0077b6,
         #0096c7,
@@ -37,6 +37,9 @@ const { title } = Astro.props;
         #48cae4,
         #90e0ef
       );
+
+      --border-radius: 0.6rem;
+
       --selected-theme: dark;
       color-scheme: var(--selected-theme);
     }
@@ -69,8 +72,16 @@ const { title } = Astro.props;
         DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
     }
 
+    a {
+      color: #f7aef8;
+    }
+
+    a:hover {
+      color: #90e0ef;
+    }
+
     .blue-gradient {
-      background-image: var(--accent-gradient);
+      background-image: var(--blue-gradient);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }

@@ -1,0 +1,17 @@
+---
+export interface Props {
+  text: string;
+}
+
+const { text } = Astro.props;
+---
+
+<h2 class="margin-top">
+  {text}
+</h2>
+
+<style>
+  .margin-top {
+    margin-top: 4rem;
+  }
+</style>
