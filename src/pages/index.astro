@@ -2,29 +2,10 @@
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
 import Title from "../components/Title.astro";
+import { Content as AboutMe } from "../content/about-me.mdx";
 ---
 
-<Layout title="something">
-  <main>
-    <Navbar />
-    <Title />
-    <p>
-      My name is Oscar Montoya. I'm a senior software engineering student at
-      CETYS. I have huge interests in system design, web development and data
-      analysis.
-    </p>
-    <p>
-      I'm currently learning Bash scripting along with Scikit-Learn. My favorite
-      music genre is rock. I like reading, watching movies and playing board
-      games in my spare time. Especially Catan and Unstable Unicorns.
-    </p>
-  </main>
+<Layout title="About Me">
+  <Title />
+  <AboutMe />
 </Layout>
-
-<style>
-  main {
-    margin: auto;
-    padding: 1.5rem;
-    max-width: 70ch;
-  }
-</style>
