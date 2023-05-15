@@ -10,27 +10,63 @@ import Card from "../components/Card.astro";
 <Layout title="About Me">
   <Title />
   <AboutMe />
-  <Subtitle text="Some projects I've built." />
+  <Subtitle text="Some projects I've built" />
   <ul role="list" class="card-grid">
     <Card
-      title="Project One"
-      text="The max thing in the world."
-      href="google.com"
-    />
+      title="Expo Engineering"
+      href="https://github.com/oscark22/expo_ingenieria"
+      img_src="../../expoingenieria.png"
+    >
+      The Expo Engineering is a yearly event that takes place in the
+      installations of CETYS. Students from engineering in all different
+      participate with the purpose of creating challenging projects.
+    </Card>
     <Card
-      title="Project One"
-      text="The max thing in the world."
-      href="google.com"
-    />
+      title="oscark22.dev"
+      href="https://github.com/oscark22/oscark22.dev"
+      img_src="../../oscark22.dev.png"
+    >
+      There's not much to say about this proyect. You are literally watching it
+      right now.
+    </Card>
   </ul>
-</Layout>
+  <div id="more-about">
+    <a href="https://github.com/oscark22"
+      ><h2>
+        More things I've built <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-arrow-right"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
+          ></path>
+        </svg>
+      </h2></a
+    >
+  </div>
 
-<style>
-  .card-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 1rem;
-    padding: 0;
-  }
-</style>
+  <style>
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2);
+      gap: 1rem;
+      padding: 0;
+    }
+
+    .card-simple-grid {
+      display: grid;
+      gap: 0.6rem;
+      padding: 0;
+    }
+
+    #more-about {
+      margin-top: var(--margin-subtitles);
+    }
+  </style>
+</Layout>

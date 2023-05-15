@@ -1,47 +1,61 @@
 ---
 export interface Props {
   title: string;
-  text: string;
   href: string;
+  img_src?: string;
 }
 
-const { title, text, href } = Astro.props;
+const { title, href, img_src } = Astro.props;
 ---
 
 <li class="custom-card">
   <a href={href}>
-    <p>
-      {title}
-    </p>
-    <p2>
-      {text}
-    </p2>
+    {
+      img_src ? (
+        <div id="image-container">
+          <img src={img_src} alt="an image" />
+        </div>
+      ) : (
+        <></>
+      )
+    }
+    <div id="card-text-container">
+      <p>
+        {title}
+      </p>
+      <p2>
+        <slot />
+      </p2>
+    </div>
   </a>
 </li>
 
 <style>
+  #card-text-container {
+    padding: 1rem 1.3rem;
+  }
+
   .custom-card {
     list-style: none;
     display: flex;
-    padding: 0.25rem;
     background-color: white;
     background-image: none;
     border-radius: var(--border-radius);
     transition: background-position 1s cubic-bezier(0.84, 0.37, 0.3, 0.79);
+    padding: 0.25rem;
   }
 
   .custom-card > a {
     width: 100%;
     text-decoration: none;
     line-height: 1.4;
-    padding: 1rem 1.3rem;
-    border-radius: 0.35rem;
+    border-radius: var(--border-radius);
     color: #111;
     background-color: white;
     opacity: 0.8;
   }
 
-  .custom-card:hover {
+  .custom-card:is(:hover, :focus-within) {
     background-image: var(--blue-gradient);
   }
 
@@ -55,5 +69,16 @@ const { title, text, href } = Astro.props;
   p2 {
     margin-top: 0rem;
     margin-bottom: 0.5rem;
+  }
+
+  #image-container {
+    max-width: 100%;
+    padding: 0.2rem;
+  }
+
+  img {
+    width: 100%;
+    object-fit: contain;
+    border-radius: var(--border-radius);
   }
 </style>
