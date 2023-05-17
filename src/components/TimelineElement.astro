@@ -1,0 +1,54 @@
+---
+export interface TimelineElement {
+  company: string;
+  title: string;
+}
+
+const { company, title } = Astro.props;
+---
+
+<div class="event">
+  <h3 class="company">{company}</h3>
+  <p class="title">{title}</p>
+  <p2 class="txt">
+    <slot />
+  </p2>
+</div>
+
+<style>
+  div.event {
+    position: relative;
+    border-radius: 6px;
+    margin-bottom: 10px;
+  }
+
+  h3.company {
+    color: var(--primary-color);
+    margin-bottom: 0.4rem;
+  }
+
+  p.title {
+    font-size: 1.1em;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 0.4rem;
+    margin-top: 0;
+  }
+  p2.txt {
+    color: #fff;
+    margin-top: 0;
+  }
+
+  div.event::after {
+    content: "";
+    background: rgb(17, 17, 17, 0.7);
+    border: 4px solid var(--secondary-color);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 0%;
+    left: -44px;
+  }
+</style>
