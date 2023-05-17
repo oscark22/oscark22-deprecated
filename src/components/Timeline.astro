@@ -1,0 +1,79 @@
+<div class="vtl">
+  <div class="event">
+    <p class="date">11 Mar 2237 12:34</p>
+    <p class="txt">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo et
+      sunt, nobis est laudantium distinctio, tempora dolore ipsam autem labore
+      fuga odio assumenda adipisci excepturi! Obcaecati perspiciatis minima
+      natus similique!.
+    </p>
+  </div>
+  <div class="event">
+    <p class="date">12 Mar 2237 14:23</p>
+    <p class="txt">Cates ate Doge food.</p>
+  </div>
+  <div class="event">
+    <p class="date">13 Mar 2237 20:12</p>
+    <p class="txt">Cates took over the Doge beds.</p>
+  </div>
+  <div class="event">
+    <p class="date">14 Mar 2237 08:11</p>
+    <p class="txt">Hoomans to the rescue.</p>
+  </div>
+  <div class="event">
+    <p class="date">15 Mar 2237 14:27</p>
+    <p class="txt">Evil cates gone. Victory for good boys and girls.</p>
+  </div>
+</div>
+
+<style>
+  .vtl {
+    position: relative;
+    padding: 10px 10px 10px 50px;
+  }
+  .vtl,
+  .vtl * {
+    box-sizing: border-box;
+  }
+
+  .vtl::before {
+    content: "";
+    width: 5px;
+    background-color: var(--secondary-color);
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 15px;
+  }
+
+  div.event {
+    position: relative;
+    border-radius: 6px;
+    margin-bottom: 10px;
+  }
+
+  p.date {
+    font-size: 1.1em;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.4rem;
+  }
+  p.txt {
+    color: #fff;
+    margin-top: 0;
+  }
+
+  div.event::after {
+    content: "";
+    background: rgb(17, 17, 17, 0.7);
+    border: 4px solid var(--secondary-color);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 0%;
+    left: -44px;
+  }
+</style>
