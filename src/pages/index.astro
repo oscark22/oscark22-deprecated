@@ -132,9 +132,23 @@ import SubtitleWithText from "../components/SubtitleWithText.astro";
   <style>
     .card-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(1, 1fr);
       gap: 1rem;
       padding: 0;
+    }
+
+    @media (min-width: 481px) {
+      /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+      .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 641px) {
+      /* big landscape tablets, laptops, and desktops */
+      .card-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
     }
 
     .card-simple-grid {
