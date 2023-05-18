@@ -64,8 +64,16 @@ import SubtitleWithText from "../components/SubtitleWithText.astro";
       img_src="../../expoingenieria.png"
     >
       The Expo Engineering is a yearly event that takes place in the
-      installations of CETYS. Students from engineering in all different
+      installations of CETYS. Students from engineering in different fields
       participate with the purpose of creating challenging projects.
+    </Card>
+    <Card
+      title="Pa Donde Fuga"
+      href="https://github.com/Mau-MD/Hackaton-advancio-2022"
+      img_src="../../padondefuga.png"
+    >
+      Pa Donde Fuga is a website where you can see the next upcoming scholar and
+      social events in Baja California.
     </Card>
     <Card
       title="oscark22.dev"
@@ -73,7 +81,30 @@ import SubtitleWithText from "../components/SubtitleWithText.astro";
       img_src="../../oscark22.dev.png"
     >
       There's not much to say about this proyect. You are literally watching it
-      right now.
+      right now. This website was built using Astro.
+    </Card>
+    <Card
+      title="FindMe!"
+      href="https://github.com/Mau-MD/find-me"
+      img_src="../../findme.png"
+    >
+      FindMe! is a website that helps you find lost pets, specifically dogs. It
+      uses a search algorithm to determine their posible location range.
+    </Card>
+    <Card
+      title="Electricity App"
+      href="https://github.com/oscark22/electricity_app_clone"
+      img_src="../../electricityapp.png"
+    >
+      Clone of the CFE app made with Dart & Flutter.
+    </Card>
+    <Card
+      title="Stack Surveys"
+      href="https://github.com/oscark22/stack_surveys"
+      img_src="../../stacksurveys.png"
+    >
+      A website that displays historical data from the Stack Overflow survey.
+      Frontend made with SvelteKit & Chart.js.
     </Card>
   </ul>
 
@@ -101,8 +132,7 @@ import SubtitleWithText from "../components/SubtitleWithText.astro";
   <style>
     .card-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(2);
+      grid-template-columns: repeat(3, 1fr);
       gap: 1rem;
       padding: 0;
     }
