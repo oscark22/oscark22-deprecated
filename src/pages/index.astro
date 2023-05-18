@@ -11,130 +11,163 @@ import SubtitleWithText from "../components/SubtitleWithText.astro";
 ---
 
 <Layout title="@oscark22">
-  <TypedText />
-  <AboutMe />
-  <Subtitle text="Education & Certifications" />
-  <SubtitleWithText
-    subtitle="AWS Certified Cloud Practitioner"
-    comment="(Feb 2023 - Feb 2026)"
-  />
-  <SubtitleWithText
-    subtitle="Centro de Enseñanza Técnica y Superior"
-    comment="BSc Software Engineering (2020-2024)"
-  />
-  <Subtitle text="Work experience" />
-  <Timeline>
-    <TimelineElement
-      company="Centro de Estudios Vitivinícolas"
-      title="Laboratory Software Developer (February 2023 - Present)"
-    >
-      Dockerized Express apps and managed containers with Docker,
-      Docker-Compose, ECS and ECR. Used JavaScript and Express to create REST
-      APIs. Configured the apps infraestructure using AWS (IAM, S3, Budgets,
-      Fargate, etcetera). Worked with React, Redux and Material UI. Designed and
-      handled a MySQL relational database using stored procedures and RDS.
-      Implemented Authorization and Authentication using JWT.
-    </TimelineElement>
-    <TimelineElement
-      company="Dialight"
-      title="Software Developer Intern (March 2023 - May 2023)"
-    >
-      Created REST endpoints using ASP.NET Core, Entity Framework and MySQL's
-      stored procedures. Used C# and the overall .NET ecosystem to create
-      backend apps. Designed and created a stateless web app using Bootstrap,
-      JavaScript, JQuery and Vite. Worked with data visualization using React
-      and Chart.js. Implemented hashing, salting, Authorization and
-      Authentication in .NET.
-    </TimelineElement>
-    <TimelineElement
-      company="Centro de Enseñanza Técnica y Superior"
-      title="Event Software Developer (June 2022 - August 2022)"
-    >
-      Worked with JavaScript and Vue.js to build websites. Consumed data from
-      PHP APIs and leveraged them using the Vue.js ecosystem tools. Leveraged
-      Pinia for state management.
-    </TimelineElement>
-  </Timeline>
+  <section class="hidden">
+    <TypedText />
+    <AboutMe />
+  </section>
+  <section class="hidden">
+    <Subtitle text="Education & Certifications" />
+    <SubtitleWithText
+      subtitle="AWS Certified Cloud Practitioner"
+      comment="(Feb 2023 - Feb 2026)"
+    />
+    <SubtitleWithText
+      subtitle="Centro de Enseñanza Técnica y Superior"
+      comment="BSc Software Engineering (2020-2024)"
+    />
+    <Subtitle text="Work experience" />
+  </section>
 
-  <Subtitle text="Some projects I've built" />
-  <ul role="list" class="card-grid">
-    <Card
-      title="Expo Engineering"
-      href="https://github.com/oscark22/expo_ingenieria"
-      img_src="../../expoingenieria.png"
-    >
-      The Expo Engineering is a yearly event that takes place in the
-      installations of CETYS. Students from engineering in different fields
-      participate with the purpose of creating challenging projects.
-    </Card>
-    <Card
-      title="Pa Donde Fuga"
-      href="https://github.com/Mau-MD/Hackaton-advancio-2022"
-      img_src="../../padondefuga.png"
-    >
-      Pa Donde Fuga is a website where you can see the next upcoming scholar and
-      social events in Baja California.
-    </Card>
-    <Card
-      title="oscark22.dev"
-      href="https://github.com/oscark22/oscark22.dev"
-      img_src="../../oscark22.dev.png"
-    >
-      There's not much to say about this proyect. You are literally watching it
-      right now. This website was built using Astro.
-    </Card>
-    <Card
-      title="FindMe!"
-      href="https://github.com/Mau-MD/find-me"
-      img_src="../../findme.png"
-    >
-      FindMe! is a website that helps you find lost pets, specifically dogs. It
-      uses a search algorithm to determine their posible location range.
-    </Card>
-    <Card
-      title="Electricity App"
-      href="https://github.com/oscark22/electricity_app_clone"
-      img_src="../../electricityapp.png"
-    >
-      Clone of the CFE app made with Dart & Flutter.
-    </Card>
-    <Card
-      title="Stack Surveys"
-      href="https://github.com/oscark22/stack_surveys"
-      img_src="../../stacksurveys.png"
-    >
-      A website that displays historical data from the Stack Overflow survey.
-      Frontend made with SvelteKit & Chart.js.
-    </Card>
-  </ul>
+  <section class="hidden">
+    <Timeline>
+      <TimelineElement
+        company="Centro de Estudios Vitivinícolas"
+        title="Laboratory Software Developer (February 2023 - Present)"
+      >
+        Dockerized Express apps and managed containers with Docker,
+        Docker-Compose, ECS and ECR. Used JavaScript and Express to create REST
+        APIs. Configured the apps infraestructure using AWS (IAM, S3, Budgets,
+        Fargate, etcetera). Worked with React, Redux and Material UI. Designed
+        and handled a MySQL relational database using stored procedures and RDS.
+        Implemented Authorization and Authentication using JWT.
+      </TimelineElement>
+      <TimelineElement
+        company="Dialight"
+        title="Software Developer Intern (March 2023 - May 2023)"
+      >
+        Created REST endpoints using ASP.NET Core, Entity Framework and MySQL's
+        stored procedures. Used C# and the overall .NET ecosystem to create
+        backend apps. Designed and created a stateless web app using Bootstrap,
+        JavaScript, JQuery and Vite. Worked with data visualization using React
+        and Chart.js. Implemented hashing, salting, Authorization and
+        Authentication in .NET.
+      </TimelineElement>
+      <TimelineElement
+        company="Centro de Enseñanza Técnica y Superior"
+        title="Event Software Developer (June 2022 - August 2022)"
+      >
+        Worked with JavaScript and Vue.js to build websites. Consumed data from
+        PHP APIs and leveraged them using the Vue.js ecosystem tools. Leveraged
+        Pinia for state management.
+      </TimelineElement>
+    </Timeline>
+  </section>
 
-  <div id="more-about">
-    <a href="https://github.com/oscark22"
-      ><h2>
-        More things I've built <svg
-          id="svg-arrow"
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          fill="currentColor"
-          class="bi bi-arrow-right"
-          viewBox="0 0 16 16"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
-          ></path>
-        </svg>
-      </h2></a
-    >
-  </div>
+  <section class="hidden">
+    <Subtitle text="Some projects I've built" />
+    <ul role="list" class="card-grid">
+      <Card
+        title="Expo Engineering"
+        href="https://github.com/oscark22/expo_ingenieria"
+        img_src="../../expoingenieria.png"
+      >
+        The Expo Engineering is a yearly event that takes place in the
+        installations of CETYS. Students from engineering in different fields
+        participate with the purpose of creating challenging projects.
+      </Card>
+      <Card
+        title="Pa Donde Fuga"
+        href="https://github.com/Mau-MD/Hackaton-advancio-2022"
+        img_src="../../padondefuga.png"
+      >
+        Pa Donde Fuga is a website where you can see the next upcoming scholar
+        and social events in Baja California.
+      </Card>
+      <Card
+        title="oscark22.dev"
+        href="https://github.com/oscark22/oscark22.dev"
+        img_src="../../oscark22.dev.png"
+      >
+        There's not much to say about this proyect. You are literally watching
+        it right now. This website was built using Astro.
+      </Card>
+      <Card
+        title="FindMe!"
+        href="https://github.com/Mau-MD/find-me"
+        img_src="../../findme.png"
+      >
+        FindMe! is a website that helps you find lost pets, specifically dogs.
+        It uses a search algorithm to determine their posible location range.
+      </Card>
+      <Card
+        title="Electricity App"
+        href="https://github.com/oscark22/electricity_app_clone"
+        img_src="../../electricityapp.png"
+      >
+        Clone of the CFE app made with Dart & Flutter.
+      </Card>
+      <Card
+        title="Stack Surveys"
+        href="https://github.com/oscark22/stack_surveys"
+        img_src="../../stacksurveys.png"
+      >
+        A website that displays historical data from the Stack Overflow survey.
+        Frontend made with SvelteKit & Chart.js.
+      </Card>
+    </ul>
+  </section>
+
+  <section class="hidden">
+    <div id="more-about">
+      <a href="https://github.com/oscark22"
+        ><h2>
+          More things I've built <svg
+            id="svg-arrow"
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-arrow-right"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
+            ></path>
+          </svg>
+        </h2></a
+      >
+    </div>
+  </section>
 
   <style>
+    section {
+      display: grid;
+      place-items: center;
+      align-content: center;
+      min-height: 100vh;
+    }
+
+    .hidden {
+      opacity: 0;
+    }
+
+    .show {
+      opacity: 1;
+      transition: all 2.2s;
+    }
+
     .card-grid {
       display: grid;
       grid-template-columns: repeat(1, 1fr);
       gap: 1rem;
       padding: 0;
+    }
+
+    @media (prefers-reduced-motion) {
+      .show {
+        transition: none;
+      }
     }
 
     @media (min-width: 481px) {
@@ -171,3 +204,18 @@ import SubtitleWithText from "../components/SubtitleWithText.astro";
     }
   </style>
 </Layout>
+
+<script defer>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      } else {
+        entry.target.classList.remove("show");
+      }
+    });
+  });
+
+  const hiddenElements = document.querySelectorAll(".hidden");
+  hiddenElements.forEach((el) => observer.observe(el));
+</script>
