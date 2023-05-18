@@ -1,0 +1,30 @@
+---
+export interface TimelineElement {
+  subtitle: string;
+  comment?: string;
+}
+
+const { subtitle, comment } = Astro.props;
+---
+
+<h3 class="text">{subtitle}</h3>
+{comment ? <p class="secondary comment">{comment}</p> : <></>}
+<p2 class="txt">
+  <slot />
+</p2>
+
+<style>
+  h3.text {
+    margin-bottom: 0.4rem;
+  }
+
+  p.comment {
+    margin-bottom: 0.4rem;
+    margin-top: 0;
+  }
+
+  p2.txt {
+    color: #fff;
+    margin-top: 0;
+  }
+</style>

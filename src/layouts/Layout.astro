@@ -41,7 +41,7 @@ const { title } = Astro.props;
       --secondary-color: #f7aef8;
 
       --border-radius: 0.6rem;
-      --margin-subtitles: 4rem;
+      --margin-subtitles: 6rem;
 
       --selected-theme: dark;
       color-scheme: var(--selected-theme);
@@ -83,10 +83,20 @@ const { title } = Astro.props;
       color: #90e0ef;
     }
 
+    h3 {
+      color: var(--primary-color);
+    }
+
     .blue-gradient {
       background-image: var(--blue-gradient);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+    }
+
+    p.secondary {
+      font-size: 1.1em;
+      font-weight: 700;
+      color: var(--secondary-color);
     }
   </style>
 </html>

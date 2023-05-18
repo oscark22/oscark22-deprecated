@@ -1,39 +1,27 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
-import Title from "../components/Title.astro";
+import TypedText from "../components/TypedText.astro";
 import { Content as AboutMe } from "../content/about-me.mdx";
 import Subtitle from "../components/Subtitle.astro";
 import Card from "../components/Card.astro";
 import Timeline from "../components/Timeline.astro";
 import TimelineElement from "../components/TimelineElement.astro";
+import SubtitleWithText from "../components/SubtitleWithText.astro";
 ---
 
 <Layout title="About Me">
-  <Title />
+  <TypedText />
   <AboutMe />
-  <Subtitle text="Some projects I've built" />
-  <ul role="list" class="card-grid">
-    <Card
-      title="Expo Engineering"
-      href="https://github.com/oscark22/expo_ingenieria"
-      img_src="../../expoingenieria.png"
-    >
-      The Expo Engineering is a yearly event that takes place in the
-      installations of CETYS. Students from engineering in all different
-      participate with the purpose of creating challenging projects.
-    </Card>
-    <Card
-      title="oscark22.dev"
-      href="https://github.com/oscark22/oscark22.dev"
-      img_src="../../oscark22.dev.png"
-    >
-      There's not much to say about this proyect. You are literally watching it
-      right now.
-    </Card>
-  </ul>
-  <Subtitle text="Education" />
-
+  <Subtitle text="Education & Certifications" />
+  <SubtitleWithText
+    subtitle="AWS Certified Cloud Practitioner"
+    comment="(Feb 2023 - Feb 2026)"
+  />
+  <SubtitleWithText
+    subtitle="Centro de Enseñanza Técnica y Superior"
+    comment="BSc Software Engineering (2020-2024)"
+  />
   <Subtitle text="Work experience" />
   <Timeline>
     <TimelineElement
@@ -62,16 +50,38 @@ import TimelineElement from "../components/TimelineElement.astro";
       company="Centro de Enseñanza Técnica y Superior"
       title="Event Software Developer (June 2022 - August 2022)"
     >
-      worked with JavaScript and Vue.js to build websites. Consumed data from
+      Worked with JavaScript and Vue.js to build websites. Consumed data from
       PHP APIs and leveraged them using the Vue.js ecosystem tools. Leveraged
       Pinia for state management.
     </TimelineElement>
   </Timeline>
 
+  <Subtitle text="Some projects I've built" />
+  <ul role="list" class="card-grid">
+    <Card
+      title="Expo Engineering"
+      href="https://github.com/oscark22/expo_ingenieria"
+      img_src="../../expoingenieria.png"
+    >
+      The Expo Engineering is a yearly event that takes place in the
+      installations of CETYS. Students from engineering in all different
+      participate with the purpose of creating challenging projects.
+    </Card>
+    <Card
+      title="oscark22.dev"
+      href="https://github.com/oscark22/oscark22.dev"
+      img_src="../../oscark22.dev.png"
+    >
+      There's not much to say about this proyect. You are literally watching it
+      right now.
+    </Card>
+  </ul>
+
   <div id="more-about">
     <a href="https://github.com/oscark22"
       ><h2>
         More things I've built <svg
+          id="svg-arrow"
           xmlns="http://www.w3.org/2000/svg"
           width="16"
           height="16"
@@ -105,6 +115,15 @@ import TimelineElement from "../components/TimelineElement.astro";
 
     #more-about {
       margin-top: var(--margin-subtitles);
+    }
+
+    #svg-arrow {
+      transition-property: transform;
+      transition-duration: 0.3s;
+    }
+
+    #more-about:hover #svg-arrow {
+      transform: translateX(10px);
     }
   </style>
 </Layout>
