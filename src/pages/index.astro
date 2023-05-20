@@ -11,7 +11,7 @@ import SubtitleWithText from "../components/SubtitleWithText.astro";
 ---
 
 <Layout title="@oscark22">
-  <section class="hidden">
+  <section class="hidden first">
     <TypedText />
     <AboutMe />
   </section>
@@ -146,6 +146,14 @@ import SubtitleWithText from "../components/SubtitleWithText.astro";
       place-items: center;
       align-content: center;
       min-height: 100vh;
+    }
+
+    section.first {
+      min-height: 80vh;
+    }
+
+    section + section {
+      margin-top: 50vh;
     }
 
     .hidden {
