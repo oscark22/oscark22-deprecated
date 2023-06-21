@@ -7,11 +7,11 @@ import "./src/css/main.css";
 <section class="hidden first">
   <div class="flex">
     <div>
-      <TypedText />
-      <AboutMe />
+      <img id="avatar-img" alt="avatar" src="./public/penrose.jpg" />
     </div>
     <div>
-      <img id="avatar-img" alt="avatar" src="./public/penrose.jpg" />
+      <TypedText />
+      <AboutMe />
     </div>
   </div>
 </section>
@@ -19,15 +19,31 @@ import "./src/css/main.css";
 <style>
   .flex {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    gap: 4rem;
+    gap: 1rem;
   }
 
   #avatar-img {
-    width: 350px;
-    height: 350px;
+    width: 320px;
+    height: 320px;
     border-radius: 50%;
     object-fit: cover;
+  }
+
+  #horizontal {
+    display: none;
+  }
+
+  @media (min-width: 641px) {
+    /* big landscape tablets, laptops, and desktops */
+  }
+
+  @media (min-width: 961px) {
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+    .flex {
+      flex-direction: row;
+      gap: 4rem;
+    }
   }
 </style>

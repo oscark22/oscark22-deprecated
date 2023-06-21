@@ -6,6 +6,7 @@ section {
 
 section.first {
   min-height: 80vh;
+  margin-top: 2rem;
 }
 
 section + section {
