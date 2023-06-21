@@ -1,0 +1,33 @@
+section {
+  display: grid;
+  align-content: center;
+  min-height: 100vh;
+}
+
+section.first {
+  min-height: 80vh;
+}
+
+section + section {
+  margin-top: 50vh;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.center {
+  place-items: center;
+}
+
+.show {
+  opacity: 1;
+  transition: all 2.2s;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+  padding: 0;
+}

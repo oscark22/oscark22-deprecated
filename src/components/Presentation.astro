@@ -1,0 +1,33 @@
+---
+import TypedText from "../components/TypedText.astro";
+import { Content as AboutMe } from "../content/about-me.mdx";
+import "./src/css/main.css";
+---
+
+<section class="hidden first">
+  <div class="flex">
+    <div>
+      <TypedText />
+      <AboutMe />
+    </div>
+    <div>
+      <img id="avatar-img" alt="avatar" src="./public/penrose.jpg" />
+    </div>
+  </div>
+</section>
+
+<style>
+  .flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  #avatar-img {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+</style>
